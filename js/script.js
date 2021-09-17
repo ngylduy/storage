@@ -20,8 +20,8 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `${allMusic[indexNumb - 1].src}`;
-  mainAudio.src = `${allMusic[indexNumb - 1].src}`;
+  musicImg.src = `https://cdn.jsdelivr.net/gh/ngylduy/storage/image/${allMusic[indexNumb - 1].src}.jpg`;
+  mainAudio.src = `https://cdn.jsdelivr.net/gh/ngylduy/storage/music/${allMusic[indexNumb - 1].src}.mp3`;
 }
 //play music function
 function playMusic(){
