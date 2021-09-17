@@ -13,6 +13,7 @@ moreMusicBtn = wrapper.querySelector("#more-music"),
 closemoreMusic = musicList.querySelector("#close");
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 isMusicPaused = true;
+curr_track = mainAudio;
 window.addEventListener("load", ()=>{
   loadMusic(musicIndex);
   playingSong(); 
@@ -217,4 +218,9 @@ function clicked(element){
   loadMusic(musicIndex);
   playMusic();
   playingSong();
+}
+function setVolume() {
+  // Set the volume according to the
+  // percentage of the volume slider set
+  curr_track.volume = volume_slider.value / 100;
 }
