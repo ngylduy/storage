@@ -26,13 +26,13 @@ function loadMusic(indexNumb){
 //play music function
 function playMusic(){
   wrapper.classList.add("paused");
-  playPauseBtn.querySelector("i").removeClass("music-play-icons").addClass("music-pause-icons");
+ var elemsms = playPauseBtn.querySelector("i").classList.remove("music-play-icons").classList.add("music-pause-icons");
   mainAudio.play();
 }
 //pause music function
 function pauseMusic(){
   wrapper.classList.remove("paused");
-  playPauseBtn.querySelector("i").removeClass("music-pause-icons").addClass("music-play-icons");
+  playPauseBtn.querySelector("i").classList.remove("music-pause-icons").classList.add("music-play-icons");
   mainAudio.pause();
 }
 //prev music function
