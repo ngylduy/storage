@@ -107,27 +107,27 @@ progressArea.addEventListener("click", (e)=>{
   playingSong();
 });
 //change loop, shuffle, repeat icon onclick
-const repeatBtn = wrapper.querySelector("#repeat-plist");
+const repeatBtn = wrapper.querySelector("#repeat-plist span");
 repeatBtn.addEventListener("click", ()=>{
   let getText = repeatBtn.innerText; //getting this tag innerText
   switch(getText){
     case "repeat":
       repeatBtn.innerText = "repeat_one";
-      repeatBtn.classList.toggle("music-repeat-icons");
-      repeatBtn.classList.toggle("music-repeatone-icons");
-      repeatBtn.setAttribute("title", "Song looped");
+      wrapper.querySelector("#repeat-plist").classList.toggle("music-repeat-icons");
+      wrapper.querySelector("#repeat-plist").classList.toggle("music-repeatone-icons");
+      wrapper.querySelector("#repeat-plist").setAttribute("title", "Song looped");
       break;
     case "repeat_one":
       repeatBtn.innerText = "shuffle";
-      repeatBtn.classList.toggle("music-repeatone-icons");
-      repeatBtn.classList.toggle("music-shuffle-icons");
-      repeatBtn.setAttribute("title", "Playback shuffled");
+      wrapper.querySelector("#repeat-plist").classList.toggle("music-repeatone-icons");
+      wrapper.querySelector("#repeat-plist").classList.toggle("music-shuffle-icons");
+      wrapper.querySelector("#repeat-plist").setAttribute("title", "Playback shuffled");
       break;
     case "shuffle":
       repeatBtn.innerText = "repeat";
-      repeatBtn.classList.toggle("music-shuffle-icons");
-      repeatBtn.classList.toggle("music-repeat-icons");
-      repeatBtn.setAttribute("title", "Playlist looped");
+      wrapper.querySelector("#repeat-plist").classList.toggle("music-shuffle-icons");
+      wrapper.querySelector("#repeat-plist").classList.toggle("music-repeat-icons");
+      wrapper.querySelector("#repeat-plist").setAttribute("title", "Playlist looped");
       break;
   }
 });
