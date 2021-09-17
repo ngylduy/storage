@@ -20,8 +20,8 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `images/${allMusic[indexNumb - 1].src}.jpg`;
-  mainAudio.src = `songs/${allMusic[indexNumb - 1].src}.mp3`;
+  musicImg.src = `${allMusic[indexNumb - 1].src}`;
+  mainAudio.src = `${allMusic[indexNumb - 1].src}`;
 }
 //play music function
 function playMusic(){
@@ -166,7 +166,7 @@ for (let i = 0; i < allMusic.length; i++) {
                   <p>${allMusic[i].artist}</p>
                 </div>
                 <span id="${allMusic[i].src}" class="audio-duration">3:40</span>
-                <audio class="${allMusic[i].src}" src="songs/${allMusic[i].src}.mp3"></audio>
+                <audio class="${allMusic[i].src}" src="${allMusic[i].src}"></audio>
               </li>`;
   ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
   let liAudioDuartionTag = ulTag.querySelector(`#${allMusic[i].src}`);
