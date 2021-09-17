@@ -26,13 +26,13 @@ function loadMusic(indexNumb){
 //play music function
 function playMusic(){
   wrapper.classList.add("paused");
- var elemsms = playPauseBtn.querySelector("i").classList.remove("music-play-icons").classList.add("music-pause-icons");
+ var elemsms = playPauseBtn.querySelector("i").classList.remove("music-play-icons").add("music-pause-icons");
   mainAudio.play();
 }
 //pause music function
 function pauseMusic(){
   wrapper.classList.remove("paused");
-  playPauseBtn.querySelector("i").classList.remove("music-pause-icons").classList.add("music-play-icons");
+  playPauseBtn.querySelector("i").classList.remove("music-pause-icons").add("music-play-icons");
   mainAudio.pause();
 }
 //prev music function
@@ -111,17 +111,17 @@ repeatBtn.addEventListener("click", ()=>{
   switch(getText){
     case "repeat":
       repeatBtn.innerText = "repeat_one";
-      repeatBtn.removeClass("music-repeat-icons").addClass("music-repeatone-icons");
+      repeatBtn.classList.remove("music-repeat-icons").add("music-repeatone-icons");
       repeatBtn.setAttribute("title", "Song looped");
       break;
     case "repeat_one":
       repeatBtn.innerText = "shuffle";
-      repeatBtn.removeClass("music-repeatone-icons").addClass("music-shuffle-icons");
+      repeatBtn.classList.remove("music-repeatone-icons").add("music-shuffle-icons");
       repeatBtn.setAttribute("title", "Playback shuffled");
       break;
     case "shuffle":
       repeatBtn.innerText = "repeat";
-      repeatBtn.removeClass("music-shuffle-icons").addClass("music-repeat-icons");
+      repeatBtn.classList.remove("music-shuffle-icons").add("music-repeat-icons");
       repeatBtn.setAttribute("title", "Playlist looped");
       break;
   }
@@ -169,7 +169,7 @@ for (let i = 0; i < allMusic.length; i++) {
                   <p>${allMusic[i].artist}</p>
                 </div>
                 <span id="${allMusic[i].src}" class="audio-duration">3:40</span>
-                <audio class="${allMusic[i].src}" src="${allMusic[i].src}"></audio>
+                <audio class="${allMusic[i].src}" src="https://cdn.jsdelivr.net/gh/ngylduy/storage/music/${allMusic[i].src}.mp3"></audio>
               </li>`;
   ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
   let liAudioDuartionTag = ulTag.querySelector(`#${allMusic[i].src}`);
