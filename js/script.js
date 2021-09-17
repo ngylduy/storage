@@ -108,7 +108,7 @@ progressArea.addEventListener("click", (e)=>{
 });
 //change loop, shuffle, repeat icon onclick
 const repeatBtn = wrapper.querySelector("#repeat-plist span");
-repeatBtn.addEventListener("click", ()=>{
+wrapper.querySelector("#repeat-plist").addEventListener("click", ()=>{
   let getText = repeatBtn.innerText; //getting this tag innerText
   switch(getText){
     case "repeat":
