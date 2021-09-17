@@ -111,14 +111,17 @@ repeatBtn.addEventListener("click", ()=>{
   switch(getText){
     case "repeat":
       repeatBtn.innerText = "repeat_one";
+      repeatBtn.removeClass("music-repeat-icons").addClass("music-repeatone-icons");
       repeatBtn.setAttribute("title", "Song looped");
       break;
     case "repeat_one":
       repeatBtn.innerText = "shuffle";
+      repeatBtn.removeClass("music-repeatone-icons").addClass("music-shuffle-icons");
       repeatBtn.setAttribute("title", "Playback shuffled");
       break;
     case "shuffle":
       repeatBtn.innerText = "repeat";
+      repeatBtn.removeClass("music-shuffle-icons").addClass("music-repeat-icons");
       repeatBtn.setAttribute("title", "Playlist looped");
       break;
   }
