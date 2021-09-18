@@ -22,6 +22,8 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
+  musicImg.alt = allMusic[indexNumb - 1].artist;
+  musicImg.title = allMusic[indexNumb - 1].artist;
   musicImg.src = `https://cdn.jsdelivr.net/gh/ngylduy/storage/image/${allMusic[indexNumb - 1].src}.jpg`;
   mainAudio.src = `https://ia801400.us.archive.org/27/items/music_20210917/${allMusic[indexNumb - 1].src}.mp3`;
 }
