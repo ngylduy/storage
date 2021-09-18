@@ -232,7 +232,7 @@ curr_track.volume = 1;
 volumeslider.value = 100
 })
 minvolum.addEventListener("click", ()=>{
-curr_track.volume = 0;
+curr_track.volume = 0.01;
 volumeslider.value = 0
 })
 
