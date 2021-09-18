@@ -10,8 +10,10 @@ progressArea = wrapper.querySelector(".progress-area"),
 progressBar = progressArea.querySelector(".progress-bar"),
 musicList = wrapper.querySelector(".music-list"),
 moreMusicBtn = wrapper.querySelector("#more-music"),
-closemoreMusic = musicList.querySelector("#close");
-volume_slider = wrapper.querySelector(".volume_slider");
+closemoreMusic = musicList.querySelector("#close"),
+volumeslider = wrapper.querySelector(".volume_slider"),
+maxvolum = wrapper.querySelector("#max-volume"),
+minvolum = wrapper.querySelector("#min-volume");
 let musicIndex = Math.floor((Math.random() * allMusic.length) + 1);
 isMusicPaused = true;
 curr_track = mainAudio;
@@ -223,7 +225,14 @@ function clicked(element){
   playingSong();
 }
 function setVolume() {
-  // Set the volume according to the
-  // percentage of the volume slider set
-  curr_track.volume = volume_slider.value / 100;
+  curr_track.volume = volumeslider.value / 100;
 }
+maxvolum.addEventListener("click", ()=>{
+curr_track.volume = 1;
+volumeslider.value = 100
+})
+minvolum.addEventListener("click", ()=>{
+curr_track.volume = 0;
+volumeslider.value = 0
+})
+
