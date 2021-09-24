@@ -27,7 +27,7 @@ function loadMusic(indexNumb){
   musicImg.alt = allMusic[indexNumb - 1].artist;
   musicImg.title = allMusic[indexNumb - 1].artist;
   var getdatasrc = `https://cdn.jsdelivr.net/gh/ngylduy/storage/image/${allMusic[indexNumb - 1].src}.jpg`;
-  $(".img-area img").data('src',getdatasrc);
+  $(".img-area img").attr('data-src',getdatasrc);
   mainAudio.src = `https://ia801400.us.archive.org/27/items/music_20210917/${allMusic[indexNumb - 1].src}.mp3`;
 }
 //play music function
